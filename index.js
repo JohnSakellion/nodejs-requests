@@ -26,7 +26,7 @@ const usersPostOptions = {
 
 //rp(usersPostOptions).then((postedUser) => console.log(postedUser)).catch(err => console.log(err));
 
-rp(baseUri+'user?_id=5de4ed1372042670ff076424').then(foundUser => console.log(JSON.parse(foundUser))).catch(err => console.log(err));
+rp(baseUri+'user/5de4ed1372042670ff076424').then(foundUser => console.log(JSON.parse(foundUser))).catch(err => console.log(err));
 
 
 /*
