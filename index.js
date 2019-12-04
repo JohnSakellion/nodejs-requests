@@ -41,23 +41,35 @@ rp(baseUri+'user')
 //POST a user
 
 rp(usersPostOptions)
-    .then((postedUser) => console.log(postedUser))
+    .then((postedUser) => {
+        console.log('User POST successful!');
+        console.log(postedUser);
+    })
     .catch(err => console.log(err));
 
 //GET user by id
 
 rp(baseUri+'user/5de4ed1372042670ff076424')
-    .then(foundUser => console.log(JSON.parse(foundUser)))
+    .then(foundUser => {
+        console.log('User found!');
+        console.log(JSON.parse(foundUser));
+    })
     .catch(err => console.log(err));
 
 //DELETE user by id
 
 rp(userDeleteOptions)
-    .then(deletedUser => console.log(deletedUser))
+    .then(deletedUser => {
+        console.log('User deleted!')
+        console.log(deletedUser)
+    })
     .catch(err => console.log(err));
 
 //UPDATE (put) user by id
 
 rp(updateUserOptions)
-    .then(updatedUser => console.log(updatedUser))
+    .then(updatedUser => {
+        console.log('User updated!');
+        console.log(updatedUser);
+    })
     .catch(err => console.log('error'));
