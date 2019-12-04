@@ -17,6 +17,20 @@ const usersPostOptions = {
     json: true
 };
 
+const userDeleteOptions = {
+    method: 'DELETE',
+    uri: baseUri+'user/5de50c4872042670ff076432'
+};
+
+const updateUserOptions = {
+    method: 'PUT',
+    uri: baseUri+'user/5de6ba3e72042670ff076453',
+    body: {
+        name: "Lord Johnny"
+    },
+    json: true
+}
+
 
 //GET all users
 
@@ -26,9 +40,17 @@ const usersPostOptions = {
 
 //rp(usersPostOptions).then((postedUser) => console.log(postedUser)).catch(err => console.log(err));
 
-rp(baseUri+'user/5de4ed1372042670ff076424').then(foundUser => console.log(JSON.parse(foundUser))).catch(err => console.log(err));
+//GET user by id
 
+//rp(baseUri+'user/5de4ed1372042670ff076424').then(foundUser => console.log(JSON.parse(foundUser))).catch(err => console.log(err));
 
+//DELETE user by id
+
+//rp(userDeleteOptions).then(deletedUser => console.log(deletedUser)).catch(err => console.log(err));
+
+//UPDATE (put) user by id
+
+rp(updateUserOptions).then(updatedUser => console.log(updatedUser)).catch(err => console.log(err));
 /*
 //todo /user, get, post, /user/{id} get, put, delete
 */
